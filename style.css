@@ -396,6 +396,3 @@ input[type="radio"] {
 }
 /* -----------------END GROUP CONTENTS----------------- */
 
-input:valid {
-    border: 1px solid #69ef5f;
-}
