@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <!-- ready made css -->
+        <link href="style.css" rel="stylesheet" />
+        <title>Forms</title>
+    </head>
+    <body id="main">
+        <div class="w3-containter">
+        <form method="get">
+            <!-- label -->
+            <label for="firstname" >First Name:</label>
+            <!-- input = input from the user -->
+             <!-- input type text -->
+              <!-- required = makes the user to input something  -->
+               <!-- placeholder = text on the input box as placeholder -->
+            <input type="text" name="firstname"  required placeholder="Enter your first name" />
+            <br />
+            <label for="lastname">Last Name:</label>
+            <input type="text" name="lastname"  required />
+            <!-- input type radio -->
+            <br />
+
+            <label for="condition">Do you agree with the conditions?</label>
+            <!-- checked is used to default auto checked -->
+            <input type="radio" name="condition" value="yes" checked> Yes
+            <input type="radio" name="condition" value="no"> No
+            <!-- inpute type submit -->
+            <br />
+            
+            <!-- password = censored input -->
+            <label for="password">Pin Number:</label>
+            <input type="password" name="password" size="5"  required />
+            </br>
+            <label for="address">Address:</label> 
+
+            <!-- to limit the character use maxlength=""  -->
+            <textarea name="address" maxlength="50" rows="8" cols="30"></textarea> </br>
+            <label>Drink:</label>
+            <!-- checkbox = multiple choices -->
+            <input type="checkbox" name="drink" value="Coffee"> Coffee 
+            <input type="checkbox" name="drink" value="Tea"> Tea 
+            <input type="checkbox" name="drink" value="Chocolate"> Chocolate 
+            <input type="checkbox" name="drink" value="Strawberry"> Strawberry 
+            <input type="checkbox" name="drink" value="Mango"> Mango 
+        </br>
+            <!-- <select> = dropdown -->
+            <label for="dessert">Dessert:</label>
+            <select name="dessert">
+                <!-- Selected=dummy option disabled = di na pwede mapili -->
+                <option selected disabled>Select Option</option>
+                <option value="icecream">Ice Cream</option>
+                <option value="pudding">Pudding</option>
+                <option value="chocolate">Chocolate</option>
+                <option value="cake">Cake</option>
+                <option value="lecheflan">Leche Flan</option>
+                <option value="halohalo">Halo-Halo</option>
+            </br>
+            </select> </br>
+            <label for="email">Email:</label>
+            <input type="email" name="email" /> </br>
+            <label for="birthday">Date of Birth:</label>
+            <!-- min and max  is for the range -->
+            <input type="date" name="birthday" min="2025-02-04" max="2025-02-10" /> </br>
+            <label for="age">Age:</label>
+            <input type="number" name="age" min="18" max="100"> </br>
+
+            <input type="submit" value="Submit my information" />
+            <!-- <label> is for the user -->
+        </form>
+        </div>
+    </body>
+</html>

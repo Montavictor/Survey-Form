@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <title>Survey Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form id="survey-form" method="get" alt="">
+
+        <!-- banner -->
+
+        <div id="banner">
+            <h1 id="title">EDSA CAROUSEL Survey Form</h1>
+            <span><img src="download.png" width="100px" id="car-logo" /></span>
+            <span><img src="dotr.png" width="75px" id="dotr" /></span>
+        </div>
+        <br>
+
+        <!--  Page display checker -->
+
+            <input type="radio" name="step" id="step1" checked>
+            <input type="radio" name="step" id="step2">
+            <input type="radio" name="step" id="step3">
+            <input type="radio" name="step" id="step4">
+            <input type="radio" name="step" id="step5">
+
+     <!----------------- Page 1---------------------->
+        <!-- Navigation bar -->
+
+        <div class="step-content" step="1">
+
+            <div class="steps">
+                <label for="step1" class="step current"></label>
+                <label for="step2" class="step"></label>
+                <label for="step3" class="step"></label>
+                <label for="step4" class="step"></label>
+                <label for="step5" class="step"></label>
+            </div>
+
+            <div class="fields">
+
+         <!-- Description  -->
+
+                    <h3>Good Day!</h3>
+                <div id="greetings">
+                    <span>
+                        <p id="description">We are researchers from the University of the Philippines - School of Urban and Regional 
+                            Planning (UP SURP) conducting a survey on the “Perceptions of Commuters in Taking the 
+                            EDSA Bus Carousel, as part of our academic requirement for the school year 2024-2025. 
+                            The survey aims to capture the demographic characteristics of commuters, 
+                            and know their perceptions, experiences and recommendations on using the EDSA 
+                            Bus Carousel as a mode of transportation.
+                        </p>                 
+                    </span>
+                    <h3>Sincerely,</h3>
+                    <br>
+                    <h3>UP SURP Students</h3>
+                </div>
+            </div>
+
+         <!-- Buttons -->
+
+            <div class="buttons">
+                <label for="step2" class="btn">Start Survey</label>
+            </div>
+        </div>
+
+     <!----------------- Page 2---------------------->
+
+        <div class="step-content" step="2">
+
+            <div class="steps">
+                <label for="step1" class="step"></label>
+                <label for="step2" class="step current"></label>
+                <label for="step3" class="step"></label>
+                <label for="step4" class="step"></label>
+                <label for="step5" class="step"></label>
+            </div>
+
+            <div class="fields">
+
+         <!-- Name -->
+
+                    <label for="name" id="name-label">Name:</label><br>
+                <div class="field">
+                    <input id="name" type="text" name="name" placeholder="Enter Your Full Name" required>
+                </div>
+
+         <!-- Email  -->
+
+                    <label for="email" id="email-label">Your Email:</label>
+                <div class="field">
+                    <input id="email" type="email" name="email" placeholder="Your Email" required>
+                </div>
+
+         <!-- Number -->
+
+                    <label for="number" id="number-label">Contact Number:</label>
+                <div class="field">
+                    <input id="number" type="tel" name="number" placeholder="Ex: 123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="Format: 123-456-7890" required>
+                </div>
+
+         <!-- Occupation -->
+
+                    <label for="occupation">Occupation:</label>
+                <div class="field">
+                    <select name="occupation" id="dropdown" required>
+                        <option value="" selected disabled>Select Option</option>
+                        <option value="student">Student</option>
+                        <option value="employee">Employee</option>
+                        <option value="self-employed">Self-Employed</option>
+                        <option value="unemployed">Unemployed</option>
+                        <option value="retired">Retired</option>
+                    </select>
+                </div>
+            </div>
+
+         <!-- Buttons -->
+
+            <div class="buttons">
+                <label for="step1" class="btn alt">Prev</label>
+                <input type="submit" class="btn" value="Submit" onclick="alert('Your responses have been recorded.')">
+                <label for="step3" class="btn alt">Next</label>
+            </div>
+        </div>
+
+     <!----------------- Page 3---------------------->
+
+        <div class="step-content" step="3">
+
+            <div class="steps">
+                <label for="step1" class="step"></label>
+                <label for="step2" class="step"></label>
+                <label for="step3" class="step current"></label>
+                <label for="step4" class="step"></label>
+                <label for="step5" class="step"></label>
+            </div>
+
+            <div class="fields">
+
+             <!-- Question #1 -->
+
+                <h3>How often do you commute Along EDSA?</h3><br>
+                <div class="group">
+                    <label for="radio1">
+                        <input type="radio" name="commute" id="radio1" value="Never" required>
+                        Never
+                    </label>
+                    <label for="radio2">
+                        <input type="radio" name="commute" id="radio2" value="Seldom">
+                        Seldom
+                    </label>
+                    <label for="radio3">
+                        <input type="radio" name="commute" id="radio3" value="Often">
+                        Often
+                    </label>
+                    <label for="radio4">    
+                        <input type="radio" name="commute" id="radio4" value="Always">
+                        Always
+                    </label>
+                </div>
+
+             <!-- Question #2 -->
+
+                <h3>What mode of transportation do you use along EDSA?</h3> <br>
+                <div class="group">
+                    <label for="check1">
+                        <input type="checkbox" name="transport" id="check1" value="bus">
+                        Edsa Carousel
+                    </label>
+                    <label for="check2">
+                        <input type="checkbox" name="transport" id="check2" value="public">
+                        Other Public Transport (PUV, Jeepney, MRT etc)
+                    </label>
+                    <label for="check3">
+                        <input type="checkbox" name="transport" id="check3" value="private">
+                        Private (Car, Motorcycle, Bicycle etc)
+                    </label>
+                    <label for="check4">
+                        <input type="checkbox" name="transport" id="check4" value="grab">
+                        Ride Hailing (Grab, Angkas etc)
+                    </label>		
+                </div>
+            </div>
+
+             <!-- Buttons -->
+
+            <div class="buttons">
+                <label for="step2" class="btn alt">Prev</label>
+                <input type="submit" class="btn" name="submit" id="submit" onclick="alert('Your responses have been recorded.')" value="Submit">
+                <label for="step4" class="btn alt">Next</label>
+            </div>
+        </div>
+
+     <!----------------- Page 4---------------------->
+
+        <div class="step-content" step="4">
+
+            <div class="steps">
+                <label for="step1" class="step"></label>
+                <label for="step2" class="step"></label>
+                <label for="step3" class="step"></label>
+                <label for="step4" class="step current"></label>
+                <label for="step5" class="step"></label>
+            </div>
+            
+            <div class="fields">
+
+         <!-- Question #3 -->
+
+                <h3>How would you rate your experience with the Edsa Carousel</h3> <br>
+                    <div class="rating">
+                        <input type="radio" name="rating" id="radio11" value="Very Unsatisfied" required>
+                        <label for="radio11">1</label>
+                        <input type="radio" name="rating" id="radio12" value="Unsatisfied" required>
+                        <label for="radio12">2</label>
+                        <input type="radio" name="rating" id="radio13" value="Neutral" required>
+                        <label for="radio13">3</label>
+                        <input type="radio" name="rating" id="radio14" value="Satisfied" required>
+                        <label for="radio14">4</label>
+                        <input type="radio" name="rating" id="radio15" value="Very Satisfied" required>
+                        <label for="radio15">5</label>
+                    </div>
+                    <div class="rating-footer">
+                        <span>Very Unsatisfied</span>
+                        <span>Very Satisfied</span>
+                    </div>
+
+         <!-- Question #4 -->
+
+                <label for="comments">What do you think should be improved on the EDSA Carousel?</label>
+                <div class="field">
+                    <textarea id="comments" name="comments" placeholder="Enter your suggestions ..." required></textarea>
+                </div>
+            </div>
+
+         <!-- Buttons -->  
+
+            <div class="buttons">
+                <label for="step3" class="btn alt">Prev</label>
+                <input type="submit" class="btn" name="submit" onclick="alert('Your responses have been recorded.')" value="Submit">
+                <label for="step5" class="btn alt">Next</label>
+            </div>
+        </div>
+
+     <!----------------- Page 5---------------------->
+
+        <div class="step-content" step="5">
+            <div class="steps">
+                <label for="step1" class="step"></label>
+                <label for="step2" class="step"></label>
+                <label for="step3" class="step"></label>
+                <label for="step4" class="step"></label>
+                <label for="step5" class="step current"></label>
+            </div>
+
+            <div class="fields">
+
+         <!-- Thank You Message -->                
+
+                <div class="thankyou">
+                    <h2>Thank You!</h2> <br>
+                    <p>Your responses have been recorded.</p> <br>
+                    <h5 id="ref">made by Victor Monta <br> <br>
+                    <a href="https://github.com/Montavictor" target="_blank"> <img src="git.png" alt="" width="30px"> </a></h5>
+                </div>
+            </div>
+
+         <!-- Buttons -->  
+
+            <div class="container-btn2">
+             <div class="buttons">
+                <label for="step1" class="btn">Take Survey Again</label>
+             </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
